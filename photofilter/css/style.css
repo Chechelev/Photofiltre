@@ -1,0 +1,218 @@
+/*font-family: 'Roboto', sans-serif;*/
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    background: linear-gradient(120deg, rgba(104, 112, 182, 1) 17%, rgba(26, 119, 111, 0.969625350140056) 54%, rgba(184, 51, 236, 0.958420868347339) 100%);
+}
+
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+
+:root {
+    --blur: 0px;
+    --invert: 0%;
+    --hue-rotate: 0deg;
+    --contrast: 100%;
+    --brightness: 100%;
+    --opacity: 100%;
+}
+
+.header {
+    width: 100%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.07);
+}
+
+.title {
+    padding: 18px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.main {
+    margin-top: 150px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    user-select: none;
+}
+
+.filter__choice {
+    width: 26%;
+}
+
+
+.filter__img img {
+    height: 470px;
+}
+
+
+.main__img {
+    filter: blur(var(--blur)) invert(var(--invert)) hue-rotate(var(--hue-rotate)) contrast(var(--contrast)) brightness(var(--brightness)) opacity(var(--opacity));
+}
+
+label {
+    display: block;
+    position: relative;
+    margin-bottom: 40px;
+    width: 90%;
+}
+
+.label__text {
+    display: flex;
+    color: #fff;
+    align-items: center;
+}
+
+.label__img {
+    width: 18px;
+    margin-right: 7px;
+
+
+}
+
+
+
+input[type="range"] {
+    appearance: none;
+    height: 2px;
+    background-color: #fff;
+    margin-top: 20px;
+    outline: none;
+    transition: 0.7s;
+    cursor: pointer;
+    width: 100%;
+
+}
+
+
+input[type=range]::-webkit-slider-thumb {
+    background: #ff96ef;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+    -webkit-appearance: none;
+    margin-top: -4px;
+    box-shadow: 0px 0px 10px 3px rgba(255, 255, 255, 0.1);
+
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+    transform: scale(1.3);
+}
+
+output {
+    position: absolute;
+    right: -35px;
+    top: 30px;
+    color: #fff;
+}
+
+/*buttons*/
+
+button {
+    position: relative;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    width: 150px;
+    padding: 10px;
+    font-size: 15px;
+    margin-top: 10px;
+    text-align: center;
+    border: 2px solid #fff;
+    background-color: transparent;
+    border-radius: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    transition: 0.4s;
+    z-index: 2;
+    color: #fff;
+    ;
+
+}
+
+button:hover {
+    background-color: rgba(255, 150, 239, 0.8);
+    ;
+}
+
+button:active {
+    opacity: 0.85;
+    transform: scale(.9);
+}
+
+.btn-load--input {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+}
+
+/*presets*/
+
+.presets {
+    display: flex;
+    max-width: 100%;
+}
+
+.preset__item {
+    padding-top: 8px;
+    cursor: pointer;
+}
+
+.presets img {
+    max-width: 107px;
+    height: 75px;
+    padding-right: 2px;
+    padding-left: 2px;
+    transition: all .2s linear;
+}
+
+.presets img:hover {
+    transform: scale(1.05);
+}
+
+.preset__text {
+    text-align: center;
+    margin-top: 3px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    color: #fff;
+    letter-spacing: normal;
+}

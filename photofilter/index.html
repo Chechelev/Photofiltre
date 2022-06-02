@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/flower.png">
+    <title>photofiltre</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="title">photofiltre</h1>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="filters">
+                <div class="filter__choice">
+
+                    <label>
+                        <div class="label__text">
+                            <img class="label__img" src="img/blur.png" alt="">   
+                            <span>Blur</span>
+                        </div>
+                        <input name="blur" type="range" data-sizing="px" min="0" max="10" value="0" id="blur">
+                        <output name="blur">0</output>
+                    </label>
+
+                    <label>
+                        <div class="label__text">
+                            <img class="label__img" src="img/invert.png" alt="">   
+                            <span>Invert</span>
+                        </div>
+                        <input name="invert" type="range" data-sizing="%" min="0" max="100" value="0" id="invert">
+                        <output name="invert">0</output>
+                    </label>
+
+                    <label>
+                        <div class="label__text">
+                            <img class="label__img" src="img/magic-wand.png" alt="">   
+                            <span>Hue-rotate</span>
+                        </div>
+                        <input name="hue-rotate" type="range" data-sizing="deg" min="0" max="180" value="0" id="hue-rotate">
+                        <output name="hue-rotate">0</output>
+                    </label>
+
+                    <label>
+                        <div class="label__text">
+                            <img class="label__img" src="img/contrast.png" alt="">   
+                            <span>Contrast</span>
+                        </div>
+                        <input name="contrast" type="range" data-sizing="%" min="0" max="200" value="100" id="contrast" >
+                        <output name="contrast">100</output>
+                    </label>
+
+                    <label>
+                        <div class="label__text">
+                            <img class="label__img" src="img/sun.png" alt="">   
+                            <span>Brightness</span>
+                        </div>
+                        <input name="brightness" type="range" data-sizing="%" min="0" max="200" value="100" id="brightness">
+                        <output class="output" name="brightness">100</output>
+                    </label>
+
+                    <label>
+                        <div class="label__text">
+                            <img class="label__img" src="img/opacity.png" alt="">   
+                            <span>Opacity</span>
+                        </div>
+                        <input name="opacity" type="range" data-sizing="%" min="0" max="100" value="100" id="opacity">
+                        <output name="opacity">100</output>
+                    </label>
+
+                    <div class="buttons">
+                        <button class="btn btn-reset">Reset</button>
+                        <button class="btn btn-load" for="fileLoad">Load picture
+                            <input class="btn-load--input" id="fileLoad" name="upload" type="file" placeholder="Load picture" accept=".jpg, .jpeg, .png, .gif"/>
+                          </button>
+                    </div>
+                </div>
+
+                <div class="filter__img">
+                    <img class="main__img" src="img/image (1).png" alt="" >
+
+                    <div class="presets">
+                        <div class="preset__item">
+                            <img class="preset" src="img/image (1).png" alt="">
+                            <p class = "preset__text">normal</p>
+                        </div>
+
+                        <div class="preset__item">
+                            <img class="preset_1" src="img/image (1).png" alt="" style ="filter: invert(25%) hue-rotate(140deg) contrast(145%)">
+                            <p class = "preset__text">radioactive</p>
+                        </div>
+
+                        <div class="preset__item">
+                            <img class="preset_2"  src="img/image (1).png" alt="" style="filter: contrast(120%) hue-rotate(40deg)">
+                            <p class = "preset__text">rich</p>
+                        </div>
+
+                        <div class="preset__item">
+                            <img class="preset_3"  src="img/image (1).png" alt="" style="filter:invert(20%) contrast(120%) brightness(110%)">
+                            <p class = "preset__text">breezy</p>
+                        </div>
+
+                        <div class="preset__item">
+                            <img class="preset_4"  src="img/image (1).png" alt="" style="filter: brightness(170%) contrast(160%);">
+                            <p class = "preset__text">sunny</p>
+                        </div>
+                        
+                        <div class="preset__item">
+                            <img class="preset_5"  src="img/image (1).png" alt="" style= "filter: hue-rotate(60deg) contrast(160%) brightness(160%);">
+                            <p class = "preset__text">honey</p>
+                        </div>
+
+                        <div class="preset__item">
+                            <img class="preset_6" src="img/image (1).png" alt="" style= "filter: hue-rotate(180deg);">
+                            <p class = "preset__text">retro</p>
+                        </div>
+                       
+                    </div>
+                    
+                </div>
+            </div>
+
+           
+        </div>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+</html>
